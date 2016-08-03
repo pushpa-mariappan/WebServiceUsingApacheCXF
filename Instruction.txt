@@ -1,0 +1,18 @@
+Apache cxf is not supported directly but as plugins.
+Apache cxf has to be downloaded from http://www.apache.org/dyn/closer.lua/cxf/2.7.18/apache-cxf-2.7.18.zip, extract it in separate location.
+In eclipse, go to windows, webservice and add apache cxf preference, give the extracted location and add apache cxf.
+Create dynamic web project.
+Create the simple service class. No need of SEI,SIB. Only a simple class without annotation.
+Run the service class choosing apache cxf server.(new-other-webservice-axis2).
+Now the server will run as apache cxf server, which will generate the annotation in JAVA files.
+Access the server using http:\\localhost:8080\applicationname\servicename\serviceport?wsdl
+For Client:
+create again a dynamic web project
+on src click new-other-webserviceclient-wsdl location and apache cxf server
+this will generate the stub 
+create the TestClient class.
+run client as java application and get the output printed.
+There is another way in apache cxf to create client using configuration file -ie by use of springframework
+create the conf file containing service class and wsdl details
+create the testclient which get this conf file as input.
+and run as java application and get the output.
